@@ -1,0 +1,67 @@
+/* variables or root varaibles*/
+:root {
+  --white: #fff;
+  --black: #000;
+  --grey: #262626;
+  --lightgrey: #a8a8a8;
+  --blue: #0095f6;
+}
+
+/* Common Styling */
+html,
+body {
+  scroll-behaviour: smooth; /*Scroll Behaviour */
+  background-color: var(--black);
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    Arial, sans-serif; /* If Robot isn't available on user computer, next */
+  color: var(--white); /* text color */
+  overflow-x: hidden; /* Disable X axis scrolling. Content Which dosen't fit along x axis on smaller screen will be hidden*/
+  display: flex;
+  width: 100vw; /* Viewport get. 1vw = 1percent width of viewport*/
+}
+
+/*  Sidebar */
+.sidebar {
+  width: 15%; /* width of sidebar is 15% of width of parent body  */
+  height: 100vh; /*height of sidebar is same os height of browser */
+  position: fixed; /* To make the sidebar fixed while scrolling*/
+  top: 0px; /* To Provide no gap at the top*/
+  left: 0px;
+  border-right: 1px solid var(--grey); /* to provide border only for right side */
+  display: flex;
+  flex-direction: column; /*Flex appears vertical*/
+  justify-content: space-between; /* Provides space between the two divs*/ /* All Elements appear centered inside the sidebar*/
+  padding: 1rem;
+}
+/*Instagram Logo */
+.logo {
+  /* rem - size of element wrt to default text size of website. 1rem = default text size
+    em - size of element wrt to parent element. 
+  
+  */
+  width: 120px;
+  margin: 1rem 0rem;
+}
+a {
+  color: var(--white);
+  text-decoration: none; /* to remove underlines*/
+}
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-center: left;
+}
+.link {
+  display: flex;
+  align-items: center; /* makes image and home center aligned in row*/
+  color: var(--white);
+  padding: 1.1rem 0.6rem 1.1rem 0rem;
+  font-size: 1rem;
+}
+.link img {
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+.bottom-section {
+  margin-bottom: 2rem;
+}
