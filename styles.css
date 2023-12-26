@@ -31,7 +31,8 @@ body {
   display: flex;
   flex-direction: column; /*Flex appears vertical*/
   justify-content: space-between; /* Provides space between the two divs*/ /* All Elements appear centered inside the sidebar*/
-  padding: 1rem;
+  padding: 1.5rem;
+  margin-left: 0.5rem;
 }
 /*Instagram Logo */
 .logo {
@@ -41,6 +42,9 @@ body {
   */
   width: 120px;
   margin: 1rem 0rem;
+}
+.logo2 {
+  display: none;
 }
 a {
   color: var(--white);
@@ -62,6 +66,127 @@ a {
   height: 1rem;
   margin-right: 0.5rem;
 }
+.sidebar-bottom {
+  display: none;
+}
+.link i {
+  margin-right: 0.6rem;
+}
+.bottom-section .link {
+  margin-bottom: 0.5rem;
+}
 .bottom-section {
-  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.main-container {
+  display: block; /*All Divs under block  have maximum width */
+  padding: 1rem;
+  width: 50vw;
+  height: auto; /* auto tells browser to decide the space*/
+  overflow-y: auto; /*disable x axis scroll */
+  margin-left: 20%;
+}
+.profile-container {
+  padding: 1rem;
+  width: 30%;
+}
+.story-container {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  overflow-x: auto; /* enable X axis scroll */
+  padding: 10px 0px;
+  gap: 1rem;
+}
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  p {
+    margin: 0.5rem 0rem;
+    font-size: 0.3rem;
+    text-align: center;
+    color: var(--lightgrey);
+  }
+  .gradient {
+    width: 35px;
+    height: 35px; /* sam height ans square to create square*/
+    border-radius: 50%; /*50 % is a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5px;
+    background: radial-gradient(
+      circle at 20% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid var(--black);
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 25px;
+  }
+  .link a {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .logo2 {
+    display: block;
+    margin: 0.3rem 0.3em 0rem 0.2rem;
+    height: 1rem;
+    padding: 0rem 0.9rem 0.3rem 0rem;
+  }
+  .top-section {
+    align-items: center;
+  }
+  .sidebar-bottom {
+    display: none;
+  }
+  .link i {
+    margin: 0rem 0.9rem 0rem 0.2rem;
+    height: 1rem;
+    width: 0.5rem;
+    padding-top: 0.8rem 0rem;
+  }
+  .sidebar-bottom {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sidebar,
+  .bottom-section {
+    display: none;
+  }
+  .sidebar-bottom {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
+    left: 0;
+    height: 1.5rem;
+    border-top: 1px solid var(--grey);
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .link img {
+    height: 1.5rem;
+  }
 }
